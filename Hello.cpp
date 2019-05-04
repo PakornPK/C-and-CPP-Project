@@ -1,8 +1,23 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std; 
 
-int main(){
-    cout << "Hello" << endl; 
+void file(){
+    ofstream fout("demo.csv");
+    if (fout)
+    {
+        fout << "test" << endl; 
+        cout << "successfully" << endl;
+    }else
+    {
+        cout << "Error" << endl; 
+    }
+    fout.close(); 
+    
+}
+
+int main(){    
+    file();
     return 0; 
 }
